@@ -8,7 +8,7 @@ const TodoList = () => {
     <>
       {todos.length === 0 ? null :
         (
-          <ul className='flex justify-between items-center bg-slate-300 mt-2 p-3 rounded-xl'>
+          <ul className='flex flex-col items-center '>
             {todos.map((item, index)=> <TodoItem key={index} item={item} index={index}/>)}
           </ul>
         )
