@@ -5,7 +5,7 @@ import { ACTIONS } from '../redux/actions'
 
 const TodoAdd = () => {
     const todos = useSelector(state => state.todoList)
-    const [inputValue, setInputValue] = useState("")
+    const [inputValue, setInputValue] = useState(null)
     const dispatch = useDispatch()
     const handleAdd = (e) => {
        e.preventDefault()
@@ -23,7 +23,7 @@ const TodoAdd = () => {
   return (
     <form onSubmit={handleAdd} className='flex justify-center gap-2'>
       <Input required value={inputValue} onChange={(e) => setInputValue(e.target.value)} size='large' allowClear  placeholder='Todo Add...'/>
-      <Button size='large' htmlType='submit' type='primary'>Add</Button>
+      <Button size='large' htmlType='submit' type='primary'>Add Task</Button>
     </form>
   )
 }
