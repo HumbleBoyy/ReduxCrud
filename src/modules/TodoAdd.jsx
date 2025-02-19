@@ -21,7 +21,7 @@ const TodoAdd = () => {
 
   return (
     <form onSubmit={handleAdd} className='flex justify-center gap-2'>
-      <Input value={inputValue} onChange={(e) => setInputValue(e.target.value)} size='large' allowClear  placeholder='Todo Add...'/>
+      <Input required value={inputValue} onChange={(e) => setInputValue(e.target.value)} size='large' allowClear  placeholder='Todo Add...'/>
       <Button size='large' htmlType='submit' type='primary'>Add</Button>
     </form>
   )
