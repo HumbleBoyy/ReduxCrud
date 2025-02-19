@@ -14,7 +14,8 @@ const TodoAdd = () => {
         value: inputValue
        }
 
-    dispatch({type:ACTIONS.ADD_TODO, payload:data})
+      dispatch({type:ACTIONS.ADD_TODO, payload:data})
+      setInputValue(null)
     }
 
     localStorage.setItem('todos', JSON.stringify(todos))
