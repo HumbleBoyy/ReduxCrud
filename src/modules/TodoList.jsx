@@ -10,6 +10,7 @@ const TodoList = () => {
   const [inputValue, setInputValue] = useState(null)
   const [todoId, setTodoId] = useState(null)
   const dispatch = useDispatch()
+  
   const handleEdit = () => {
       dispatch({type:ACTIONS.EDIT_TODO, payload:{id:todoId, newValue:inputValue}})
       setOpenEditModal(false)
